@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Hero from './Hero';
+import styled from 'styled-components';
+import { findByLabelText } from '@testing-library/react';
+import man from './man.png';
+import TopicComponent from './TopicComponent';
+
 
 function App() {
+
+  const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  margin: 0 10%auto;
+`
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Hero />
+      {/* <img src={man} alt="" height={500}/> */}
+
+      <TopicComponent topic="Skills" alignLight="right" />
+      <TopicComponent topic="My work" alignLight="left" />
+      <TopicComponent topic="My work" alignLight="left" />
+      <TopicComponent topic="My work" alignLight="left" />
+    </Container>
   );
 }
 
