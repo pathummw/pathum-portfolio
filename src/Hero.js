@@ -12,7 +12,7 @@ export default function Hero() {
         display: flex;
         min-height: 100vh;
         /* align-items: center; */
-        background-color:  rgba(102, 102, 102, 0.192);
+        /* background-color:  rgba(102, 102, 102, 0.192); */
         justify-content: center;
         flex-direction: column;
         
@@ -48,7 +48,7 @@ export default function Hero() {
     `
 
     return (
-        <HeroContainer>
+        <HeroContainer id="home">
 
 
             <h3>I am</h3>

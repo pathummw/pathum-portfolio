@@ -4,13 +4,11 @@ import TrafficLight from "./TrafficLight";
 
 const StyledDiv = styled.div`
     display: flex;
-    align-items: center;
-    background-color : gray;
-    /* width: 80vw; */
+    align-items: baseline;
 
     flex-direction: row;
     ${props =>
-        props.alignLight == "right" &&
+        props.alignLight === "right" &&
         css`
         flex-direction: row-reverse;
         `
@@ -18,7 +16,7 @@ const StyledDiv = styled.div`
     
     justify-content: left;
     ${props =>
-        props.alignLight == "right" &&
+        props.alignLight === "right" &&
         css`
     justify-content: right;
     `};
@@ -58,9 +56,6 @@ export default function Topic(props) {
         <StyledDiv alignLight={props.alignLight}>
             <TrafficLight />
             <h1>{props.topic}</h1>
-
-
-
         </StyledDiv>
     )
 }
