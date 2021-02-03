@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-/* import { Link } from "react-router-dom"; */
 import { Link, animateScroll as scroll } from "react-scroll";
 
 
@@ -81,14 +80,6 @@ export default function Nav() {
                     duration={800}
                 >Contact me</StyledLink>
 
-                {/* <StyledLink to="/"> Home </StyledLink>
-                <StyledLink to="/skills"> Skills </StyledLink>
-                <StyledLink to="/myWork"> My work </StyledLink>
-                <StyledLink to="/contact"> Contact </StyledLink> */}
-                {/* <li>Home</li>
-                <li>Skills</li>
-                <li>My work</li>
-                <li>Contact</li> */}
             </UL>
         </StyledNav>
     );

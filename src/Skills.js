@@ -5,7 +5,7 @@ import styled, { css } from "styled-components";
 const StyledDIV = styled.div`
     display:flex;
     /* align-items: center; */
-    min-height: 100vh;
+    min-height: 75vh;
     color: #716D6D;
     h2{
         font-weight: 200;
