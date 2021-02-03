@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import TopicComponent from './TopicComponent'
+import ProfileImage from "./profile.jpg";
 
 export default function Hero() {
 
@@ -47,6 +48,29 @@ export default function Hero() {
         `};
     `
 
+    const ImageDIV = styled.div`
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            object-fit: cover;
+            border: solid 3px #D1AD54;
+            transition: ease-in-out 1s;
+            /* z-index: -5; */
+        }
+
+        img:hover{
+            width: 250px;
+            height: 250px;
+            /* transition: 1s; */
+            transition: ease-in-out .5s; 
+            /* border: solid 5px #D1AD54; */
+        }
+    `
+
     return (
         <HeroContainer id="home">
 
@@ -55,6 +79,10 @@ export default function Hero() {
             <h1>Pathum</h1>
             <h1>Weerathunga</h1>
             <h3>Front end developer </h3>     {/* I can your &lt;www /&gt;... */}
+
+            <ImageDIV>
+                {<img src={ProfileImage} width="150px" height="auto" alt="" />}
+            </ImageDIV>
 
 
             {/* <TopicComponent topic="Skills" alignLight="right" />

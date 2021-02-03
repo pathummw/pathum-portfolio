@@ -12,7 +12,7 @@ import Nav from './Nav';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from './Footer';
 import Particles from "react-tsparticles";
-import ParticlesBg from 'particles-bg'
+import ParticlesBg from 'particles-bg';
 
 
 
@@ -32,7 +32,7 @@ function App() {
   return (
     <Container>
 
-      <ParticlesBg type="cobweb" bg={true} color="#0F0C08" />
+      <ParticlesBg type="cobweb" bg={true} color="#D1AD54" />  {/*Gold: color="#D1AD54" */}
       <Router>
         <Nav />
         <Switch>

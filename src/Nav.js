@@ -4,8 +4,10 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 
 const StyledNav = styled.nav`
+display:flex;
+justify-content: flex-end;
     .active{
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid #D1AD54;
     } 
 
 `
@@ -23,13 +25,14 @@ const UL = styled.ul`
 
 const StyledLink = styled(Link)`
         text-decoration: none;
-        color: #FAFAFA;
+        color: #D1D1D1;
         font-weight: 300;
         font-size: 1em;
         padding: 5px 30px;
 
         &:hover{
-            color: yellow;
+            color: #D1AD54;
+            transition: 0.5s;
         }
         &:active{
             /* border-radius: 20px;

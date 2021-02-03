@@ -4,24 +4,41 @@ import styled, { css } from "styled-components";
 
 const StyledDIV = styled.div`
     display:flex;
-    align-items: center;
+    /* align-items: center; */
     min-height: 100vh;
     color: #716D6D;
     h2{
-        font-weight: 400;
+        font-weight: 200;
         font-size: 2.5em;
+        margin: 1em 0;
     }
-    h3{
+    /* h3{
         font-weight: 300;
         font-size: 2em;
-    }
+    } */
+    h3{
+            font-size: 1.5em;
+            font-weight:100; 
+        }
 `
 
 const Left = styled.section`
-    flex:1;
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `
 const Right = styled.section`
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+const Middle = styled.section`
     flex:1;
+    display: flex;
+    flex-direction: column;
+    
 `
 
 export default function Skills() {
@@ -37,6 +54,9 @@ export default function Skills() {
                     <SkillItem topic="HTML" level="level4" />
                     <SkillItem topic="CSS" level="level4" />
                 </Left>
+                <Middle>
+
+                </Middle>
                 <Right>
                     <h2>Creative skills</h2>
                     <SkillItem topic="Illustrator" level="level3" />
@@ -57,6 +77,9 @@ const SkillItemDiv = styled.div`
     }
     section:nth-child(2){
         flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
     }
 `
 
@@ -69,7 +92,6 @@ function SkillItem(props) {
             <section>
                 <FiveDots level={props.level} />
             </section>
-
 
         </SkillItemDiv>
     );
