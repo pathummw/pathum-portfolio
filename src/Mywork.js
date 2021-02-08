@@ -2,6 +2,9 @@ import TopicComponent from "./TopicComponent";
 import styled from 'styled-components';
 import Man from './man.png';
 import Profile from './profile.jpg';
+import Anjalee from './anjalee.JPG';
+import Sharmen from './sharmen.JPG';
+import Digican from './digican.JPG';
 
 
 const StyledDIV = styled.div`
@@ -15,6 +18,11 @@ const ItemListDiv = styled.div`
     justify-content: space-around;
     min-height: 100vh;
     margin-top: 20vh;
+
+    @media screen and (max-width: 730px){
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export default function Mywork() {
@@ -24,10 +32,11 @@ export default function Mywork() {
             {/* <StyledDIV > */}
 
             <ItemListDiv>
-                <Circle imgName={Man} />
-                <Circle imgName={Profile} />
-                <Circle imgName={Profile} />
-                <Circle imgName={Man} />
+                <a href="http://anjalee.se/"> <Circle imgName={Anjalee} /> </a>
+                <a href="http://sharmen.surge.sh/"> <Circle imgName={Sharmen} /> </a>
+                <a href="http://digican.se/"> <Circle imgName={Digican} /> </a>
+
+                {/* <Circle imgName={Man} /> */}
             </ItemListDiv>
             {/* </StyledDIV> */}
         </div>

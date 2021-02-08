@@ -39,6 +39,9 @@ const StyledDIV = styled.div`
         font-size: 80px;
         transition: ease-in-out 0.2s;
     }
+    @media screen and (max-width: 730px){
+        /* flex-direction: column; */
+    }
 `
 
 
@@ -53,7 +56,7 @@ export default function Contact() {
                     <li><a href="mailto:pathummw@yahoo.com"><FaEnvelope /></a></li>
                     <li><a href="https://github.com/pathummw"><FaGithub /></a></li>
                     <li><a href="https://www.linkedin.com/in/pathum-weerathunga-87248a56"><FaLinkedin /></a></li>
-                    <li><a href=""><FaDesktop /></a></li>
+                    <li><a href="http://digican.se/"><FaDesktop /></a></li>
                 </ul>
                 <img src={Signature} alt="" />
             </StyledDIV>

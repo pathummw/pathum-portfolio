@@ -49,6 +49,13 @@ const StyledDiv = styled.div`
         font-size: 5em;
         font-weight: 700;
     }
+
+    @media screen and (max-width: 730px){
+        justify-content: center;
+            h1{
+                /* font-size: 1em; */
+            }
+        }
 `
 
 export default function Topic(props) {

@@ -27,6 +27,12 @@ export default function Hero() {
             font-weight:100; 
             color: #716D6D;
         }
+
+        @media screen and (max-width: 730px){
+            h1{
+                font-size: 1em;
+            }
+        }
     `
     const Dot = styled.span`
         width: 30px;
@@ -81,7 +87,7 @@ export default function Hero() {
             <h3>Front end developer </h3>     {/* I can your &lt;www /&gt;... */}
 
             <ImageDIV>
-                {<img src={ProfileImage} width="150px" height="auto" alt="" />}
+                {<img src={ProfileImage} alt="Pathum profile picture" />}
             </ImageDIV>
 
 

@@ -4,8 +4,10 @@ import styled, { css } from "styled-components";
 
 const StyledDIV = styled.div`
     display:flex;
-    /* align-items: center; */
+    align-items: baseline;
+    /* justify-content: center; */
     min-height: 75vh;
+    margin-top: 20vh;
     color: #716D6D;
     h2{
         font-weight: 200;
@@ -20,6 +22,10 @@ const StyledDIV = styled.div`
             font-size: 1.5em;
             font-weight:100; 
         }
+
+    @media screen and (max-width: 730px){
+        flex-direction: column;
+    }
 `
 
 const Left = styled.section`
@@ -111,19 +117,49 @@ const DotContainer = styled.div`
         background-color: grey;
     }
     ${props =>
-        props == "level3" &&
+        props.level === "level1" &&
+        css`
+        span:nth-child(1){
+        background-color: green;
+        }
+        `};
+
+    ${props =>
+        props.level === "level2" &&
         css`
         span:nth-child(1),span:nth-child(2){
         background-color: green;
         }
         `};
-    
-    
+        
+    ${props =>
+        props.level === "level3" &&
+        css`
+        span:nth-child(1),span:nth-child(2),span:nth-child(3){
+        background-color: green;
+        }
+        `};
+
+    ${props =>
+        props.level === "level4" &&
+        css`
+        span:nth-child(1),span:nth-child(2),span:nth-child(3),span:nth-child(4){
+        background-color: green;
+        }
+        `};
+
+    ${props =>
+        props.level === "level5" &&
+        css`
+        span:nth-child(1),span:nth-child(2),span:nth-child(3),span:nth-child(4),span:nth-child(5){
+        background-color: green;
+        }
+        `};
 `
 
 function FiveDots(props) {
     return (
-        <DotContainer level>
+        <DotContainer level={props.level}>
             <span />
             <span />
             <span />
