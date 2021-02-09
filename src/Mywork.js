@@ -1,10 +1,8 @@
 import TopicComponent from "./TopicComponent";
 import styled from 'styled-components';
-import Man from './man.png';
-import Profile from './profile.jpg';
-import Anjalee from './anjalee.JPG';
-import Sharmen from './sharmen.JPG';
-import Digican from './digican.JPG';
+import Anjalee from './img/anjalee.JPG';
+import Sharmen from './img/sharmen.JPG';
+import Digican from './img/digican.JPG';
 
 
 const StyledDIV = styled.div`

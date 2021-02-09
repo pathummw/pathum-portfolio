@@ -3,7 +3,6 @@ import './App.css';
 import Hero from './Hero';
 import styled from 'styled-components';
 import { findByLabelText } from '@testing-library/react';
-import man from './man.png';
 import TopicComponent from './TopicComponent';
 import Skills from './Skills';
 import Mywork from './Mywork';

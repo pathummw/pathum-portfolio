@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import TopicComponent from './TopicComponent'
-import ProfileImage from "./profile.jpg";
+import ProfileImage from "./img/profile.jpg";
 
 export default function Hero() {
 

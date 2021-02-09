@@ -1,7 +1,7 @@
 import TopicComponent from "./TopicComponent";
 
 import styled, { css } from "styled-components";
-import Signature from './signature.png';
+import Signature from './img/signature.png';
 import { FaEnvelope } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";

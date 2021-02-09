@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import ParticlesBg from 'particles-bg';
-import Signature from './signature.png'
+import Signature from './img/signature.png'
 
 const StyledDIV = styled.span`
     min-height: 10vh;
