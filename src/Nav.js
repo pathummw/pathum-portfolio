@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { COLORS } from './Colors';
 
 
 const StyledNav = styled.nav`
 display:flex;
 justify-content: flex-end;
     .active{
-        border-bottom: 1px solid #D1AD54;
+        border-bottom: 1px solid ${COLORS.GOLD};
     } 
 
 `
@@ -24,18 +25,14 @@ const UL = styled.ul`
 
 const StyledLink = styled(Link)`
         text-decoration: none;
-        color: #D1D1D1;
+        color: ${COLORS.FONT_WHITE};
         font-weight: 300;
         font-size: 1em;
         padding: 5px 30px;
 
         &:hover{
-            color: #D1AD54;
+            color: ${COLORS.GOLD};
             transition: 0.5s;
-        }
-        &:active{
-            /* border-radius: 20px;
-            border: 1px solid whitesmoke */
         }
     `
 

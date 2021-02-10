@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Anjalee from './img/anjalee.JPG';
 import Sharmen from './img/sharmen.JPG';
 import Digican from './img/digican.JPG';
-
+import { COLORS } from './Colors';
 
 const StyledDIV = styled.div`
     min-height: 100vh;
@@ -52,7 +52,7 @@ const ImageDIV = styled.div`
             top: 20px;
             left: 20px; */
             object-fit: cover;
-            border: solid 5px #D1AD54;
+            border: solid 5px ${COLORS.GOLD};
             transition: ease-in-out 1s;
             /* z-index: -5; */
         }

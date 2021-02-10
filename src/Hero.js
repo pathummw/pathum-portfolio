@@ -1,19 +1,15 @@
 import styled, { css } from 'styled-components'
 import TopicComponent from './TopicComponent'
 import ProfileImage from "./img/profile.jpg";
+import { COLORS } from './Colors';
 
 export default function Hero() {
 
     const HeroContainer = styled.div`
-        /* display: flex; */
-        /* background-color: indigo; */
-        /* align-items: center;
-        justify-content: center; */
+
         font-size: 4em;
         display: flex;
         min-height: 100vh;
-        /* align-items: center; */
-        /* background-color:  rgba(102, 102, 102, 0.192); */
         justify-content: center;
         flex-direction: column;
         
@@ -24,8 +20,9 @@ export default function Hero() {
 
         &>h3{
             font-size: 0.4em;
-            font-weight:100; 
-            color: #716D6D;
+            font-weight:100;
+            color: ${COLORS.FONT_GREY};
+
         }
 
         @media screen and (max-width: 730px){
@@ -63,17 +60,14 @@ export default function Hero() {
             top: 20px;
             left: 20px;
             object-fit: cover;
-            border: solid 3px #D1AD54;
+            border: solid 3px ${COLORS.GOLD};
             transition: ease-in-out 1s;
-            /* z-index: -5; */
         }
 
         img:hover{
             width: 250px;
             height: 250px;
-            /* transition: 1s; */
-            transition: ease-in-out .5s; 
-            /* border: solid 5px #D1AD54; */
+            transition: ease-in-out .5s;
         }
     `
 
@@ -90,9 +84,6 @@ export default function Hero() {
                 {<img src={ProfileImage} alt="Pathum profile picture" />}
             </ImageDIV>
 
-
-            {/* <TopicComponent topic="Skills" alignLight="right" />
-            <TopicComponent topic="My work" alignLight="left" /> */}
         </HeroContainer>
     )
 }

@@ -6,13 +6,13 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaDesktop } from "react-icons/fa";
+import { COLORS } from './Colors';
 
 const StyledDIV = styled.div`
     
     height: 75vh;
     position: relative;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     img{
         height:70px;
@@ -31,7 +31,7 @@ const StyledDIV = styled.div`
         
     }
     a{
-        color: #D1AD54;
+        color: ${COLORS.GOLD};
         text-decoration: none;
         transition: ease-in-out 0.3s;
     }
