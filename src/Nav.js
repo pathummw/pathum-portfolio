@@ -13,7 +13,7 @@ justify-content: flex-end;
     @media screen and (max-width: 730px){
             justify-content: center;
         }
-
+    
 `
 
 const UL = styled.ul`
@@ -32,6 +32,16 @@ const StyledLink = styled(Link)`
         &:hover{
             color: ${COLORS.GOLD};
             transition: 0.5s;
+        }
+
+        @media screen and (max-width: 450px){
+            font-size: 0.5em;
+            padding: 5px 20px;
+        }
+        //Galaxy fold
+        @media screen and (max-width: 280px){  
+            font-size: 0.5em;
+            padding: 5px 10px;
         }
     `
 

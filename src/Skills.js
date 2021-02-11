@@ -5,20 +5,13 @@ import styled, { css } from "styled-components";
 const StyledDIV = styled.div`
     display:flex;
     align-items: baseline;
-    /* background-color: lightcyan; */
-    /* justify-content: center; */
     min-height: 75vh;
-    margin-top: 20vh;
+    padding-top: 10vh;
     color: ${COLORS.FONT_GREY};
     h2{
         font-weight: 200;
         font-size: 2.5em;
-        margin: 1em 0;
     }
-    /* h3{
-        font-weight: 300;
-        font-size: 2em;
-    } */
     h3{
             font-size: 1.5em;
             font-weight:100; 
@@ -27,9 +20,19 @@ const StyledDIV = styled.div`
     @media screen and (max-width: 980px){
         flex-direction: column;
         align-items: center;
-
-        /* margin-top: 10vh; */
     }
+
+    @media screen and (max-width: 450px){
+            margin-bottom: 5vh;
+            padding-top: 5vh;
+            h2{
+                font-size: 1.5em;
+            }
+            h3{
+            font-size: 1.2em;
+            }
+            
+        }
 `
 
 const Left = styled.section`
@@ -37,7 +40,6 @@ const Left = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: red; */
     width: 100%;
 
 `
@@ -46,10 +48,9 @@ const Right = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: yellow; */
     width: 100%;
 `
-const Middle = styled.section`    //This is a empty space
+const Middle = styled.section`    //This is just a empty space
     flex:1;
     display: flex;
     flex-direction: column;
@@ -69,9 +70,12 @@ export default function Skills() {
                     <h2>Frontend languages</h2>
 
                     <SkillItem topic="Javascript" level="level3" />
-                    <SkillItem topic="React" level="level1" />
+                    <SkillItem topic="React" level="level2" />
                     <SkillItem topic="HTML" level="level4" />
                     <SkillItem topic="CSS" level="level4" />
+                    <SkillItem topic="SASS" level="level1" />
+
+                    <br />
 
                     <h2>Other</h2>
 
@@ -87,9 +91,11 @@ export default function Skills() {
                     <SkillItem topic="Photoshop" level="level3" />
                     <SkillItem topic="Figma" level="level4" />
 
+                    <br />
+
                     <h2>Dev tools</h2>
-                    <SkillItem topic="VS code" />
-                    <SkillItem topic="Github" />
+                    <SkillItem topic="VS code" level="level4" />
+                    <SkillItem topic="Github" level="level4" />
                 </Right>
 
 
@@ -103,20 +109,16 @@ export default function Skills() {
 const SkillItemDiv = styled.div`
     display: flex;
     align-items: center;
-    /* background-color: yellow; */
     section:nth-child(1){
         flex: 1;
-        /* background-color: lightpink; */
     }
     section:nth-child(2){
         flex: 1;
         display: flex;
         justify-content: flex-end;
-        /* background-color:tomato; */
     }
 
     @media screen and (max-width: 730px){
-        /* display: none; */
         width: 100%;
     }
 `

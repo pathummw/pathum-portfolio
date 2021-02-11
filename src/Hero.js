@@ -41,6 +41,25 @@ const HeroContainer = styled.div`
             }
 
         }
+        @media screen and (max-width: 450px){
+            h1{
+                font-size: 0.6em;
+            }
+        }
+        //Galaxy fold
+        @media screen and (max-width: 280px){  
+            h1{
+                font-size: 0.5em;
+            }
+            h3{
+                font-size: 0.3em;
+            }
+            span{
+                font-size: 0.17em;
+            }
+        }
+
+
     `
 
 const ImageDIV = styled.div`
@@ -68,6 +87,7 @@ const ImageDIV = styled.div`
             }
         }
         
+        
     `
 
 
@@ -75,12 +95,10 @@ export default function Hero() {
 
     const [data, setData] = useState({ data: null });
 
-    useEffect(() => {
-        async function fetchData() {
-            const result = await axios(url);
-            setData(result)
-        }
-    }, [setData]);
+    useEffect(async () => {
+        const result = await axios(url);
+        setData(result)
+    }, []);
 
     return (
         <HeroContainer id="home">
@@ -90,13 +108,12 @@ export default function Hero() {
             <h1>Pathum</h1>
             <h1>Weerathunga</h1>
             <h3>Front end developer </h3>     {/* I can your &lt;www /&gt;... */}
-            <span><p>From Stockholm</p>{/* !data.data ? '' : Math.round(data.data.main.temp) */}
+            <span><p>From Stockholm</p>{!data.data ? '' : Math.round(data.data.main.temp)}
 
-                {/* !data.data ? '' : < WiCelsius /> */}
+                {!data.data ? '' : < WiCelsius size={20} />}
 
-            </span>     {/* &#8451; */}
+            </span>
 
-            <span>{!data.data ? 'Pathum' : data.data.main.temp}</span>
 
             <ImageDIV>
                 {<img src={ProfileImage} alt="Pathum profile picture" />}

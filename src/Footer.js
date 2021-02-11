@@ -15,7 +15,7 @@ const StyledDIV = styled.span`
 export default function Footer() {
     return (
         <StyledDIV>
-            <footer><img src={Signature} alt="Signature of Weerathunga" /></footer>
+            <footer><img src={Signature} alt="Signature of Pathum Weerathunga" /></footer>
         </StyledDIV>
     );
 }

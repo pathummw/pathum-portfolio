@@ -10,13 +10,18 @@ import { COLORS } from './Colors';
 const ItemListDiv = styled.div`
     display: flex;
     justify-content: space-around;
-    min-height: 100vh;
-    margin-top: 20vh;
+    min-height: 75vh;
+    padding-top: 8vh;
 
     @media screen and (max-width: 730px){
         flex-direction: column;
         align-items: center;
     }
+
+    @media screen and (max-width: 450px){
+            margin-bottom: 10vh;
+            padding-top: 5vh;
+        }
 `
 
 export default function Mywork() {
@@ -24,9 +29,9 @@ export default function Mywork() {
         <div id="myWork">
             <TopicComponent topic="My work" alignLight="left" />
             <ItemListDiv>
-                <a href="http://anjalee.se/"> <Circle imgName={Anjalee} /> </a>
-                <a href="http://sharmen.surge.sh/"> <Circle imgName={Sharmen} /> </a>
-                <a href="http://digican.se/"> <Circle imgName={Digican} /> </a>
+                <a href="http://anjalee.se/"> <Circle imgName={Anjalee} alt="Image link, website for a footvård " /> </a>
+                <a href="http://sharmen.surge.sh/"> <Circle imgName={Sharmen} alt="Image of a link,On going project for a school" /> </a>
+                <a href="http://digican.se/"> <Circle imgName={Digican} alt="Digican project link image,Pathums own company" /> </a>
             </ItemListDiv>
         </div>
 
@@ -39,23 +44,29 @@ const ImageDIV = styled.div`
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            /* position: absolute;
-            top: 20px;
-            left: 20px; */
             object-fit: cover;
             border: solid 5px ${COLORS.GOLD};
             transition: ease-in-out 1s;
-            /* z-index: -5; */
         }
 
         img:hover{
             width: 300px;
             height: 300px;
-            /* transition: 1s; */
             transition: ease-in-out .5s; 
-            /* border: solid 5px #D1AD54; */
         }
-        /* background-color:  aliceblue; */
+
+
+
+
+
+        @media screen and (max-width: 730px){
+            img{
+                width: 150px;
+                height: 150px;
+            }
+            
+        }
+
     `
 
 function Circle(props) {
