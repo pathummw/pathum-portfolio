@@ -1,11 +1,14 @@
-import styled, { css } from 'styled-components'
-import TopicComponent from './TopicComponent'
+import { WiCelsius } from "react-icons/wi";
+import styled from 'styled-components'
 import ProfileImage from "./img/profile.jpg";
 import { COLORS } from './Colors';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+const url = "http://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric";
 
-export default function Hero() {
 
-    const HeroContainer = styled.div`
+
+const HeroContainer = styled.div`
 
         font-size: 4em;
         display: flex;
@@ -24,34 +27,23 @@ export default function Hero() {
             color: ${COLORS.FONT_GREY};
 
         }
+        span{
+            position: absolute;
+            left: 10px;
+            bottom: 10px; 
+            font-size: 0.2em;
+            color: ${COLORS.GOLD};
+        }
 
         @media screen and (max-width: 730px){
             h1{
                 font-size: 1em;
             }
+
         }
     `
-    const Dot = styled.span`
-        width: 30px;
-        height: 30px;
-        background-color: red;
-        border-radius: 50%;
-        display: inline-block;
 
-        ${props =>
-            props.yellowLight &&
-            css`
-        background-color: yellow;
-        `};
-
-        ${props =>
-            props.greenLigt &&
-            css`
-        background-color: green;
-        `};
-    `
-
-    const ImageDIV = styled.div`
+const ImageDIV = styled.div`
         img{
             width: 50px;
             height: 50px;
@@ -69,7 +61,26 @@ export default function Hero() {
             height: 250px;
             transition: ease-in-out .5s;
         }
+
+        @media screen and (max-width: 730px){
+            img{
+                top: 40px;
+            }
+        }
+        
     `
+
+
+export default function Hero() {
+
+    const [data, setData] = useState({ data: null });
+
+    useEffect(() => {
+        async function fetchData() {
+            const result = await axios(url);
+            setData(result)
+        }
+    }, []);
 
     return (
         <HeroContainer id="home">
@@ -79,10 +90,16 @@ export default function Hero() {
             <h1>Pathum</h1>
             <h1>Weerathunga</h1>
             <h3>Front end developer </h3>     {/* I can your &lt;www /&gt;... */}
+            <span><p>From Stockholm</p>{!data.data ? '' : Math.round(data.data.main.temp)}
+
+                {!data.data ? '' : < WiCelsius />}
+
+            </span>     {/* &#8451; */}
 
             <ImageDIV>
                 {<img src={ProfileImage} alt="Pathum profile picture" />}
             </ImageDIV>
+
 
         </HeroContainer>
     )

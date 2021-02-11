@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
+import { COLORS } from './Colors';
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -12,9 +13,15 @@ const GlobalStyle = createGlobalStyle`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:#161515;
-  color: #D1D1D1;
+  background-color:${COLORS.BACKGROUND_BLACK};
+  color: ${COLORS.FONT_WHITE};
   overflow-x: hidden;
   }
 `
 export default GlobalStyle;
+
+
+/* GOLD: '#D1AD54',
+    FONT_GREY: '#716D6D',
+    BACKGROUND_BLACK: '#161515',
+    FONT_WHITE: '#D1D1D1', */

@@ -6,9 +6,10 @@ import Mywork from './Mywork';
 import Contact from './Contact';
 import Nav from './Nav';
 import ParticlesBg from 'particles-bg';
-import { useState, useEffect } from 'react';
+import Footer from './Footer';
+/* import { useState, useEffect } from 'react';
 import axios from 'axios';
-const url = "http://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric";
+const url = "http://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric"; */
 
 
 
@@ -21,12 +22,7 @@ function App() {
   flex-direction: column;
   margin: 0 10%;
 
-  span{
-    
-  }
   
-
-
   @media screen and (max-width: 480px){
 
   }
@@ -41,18 +37,18 @@ function App() {
     }, [temp]) */
 
 
-  const [data, setData] = useState({ data: null });
+  /* const [data, setData] = useState({ data: null });
 
   useEffect(async () => {
     const result = await axios(url);
     setData(result)
-  }, []);
+  }, []); */
 
 
   return (
     <Container>
       <GlobalStyle />
-      <span><h3>{!data.data ? '' : data.data.main.temp}&#8451;</h3></span>
+      {/* <span><h3>{!data.data ? '' : data.data.main.temp}&#8451;</h3></span> */}
       <ParticlesBg type="cobweb" bg={true} color="#D1AD54" />  {/*Gold: color="#D1AD54" */}
       <Nav />
 
@@ -61,7 +57,7 @@ function App() {
       <Mywork />
       <Contact />
 
-      {/* <Footer /> */}
+      <Footer />
 
 
 

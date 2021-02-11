@@ -10,17 +10,16 @@ justify-content: flex-end;
         border-bottom: 1px solid ${COLORS.GOLD};
     } 
 
+    @media screen and (max-width: 730px){
+            justify-content: center;
+        }
+
 `
 
 const UL = styled.ul`
         display: flex;
         position: fixed;
-        /* justify-content: space-around; */
-        /* min-height: 8vh; */
         list-style: none;
-        /* background-color: #171717; */
-        /* align-items: center; */
-        justify-content: flex-end;
     `
 
 const StyledLink = styled(Link)`
@@ -29,7 +28,7 @@ const StyledLink = styled(Link)`
         font-weight: 300;
         font-size: 1em;
         padding: 5px 30px;
-
+        white-space: nowrap;
         &:hover{
             color: ${COLORS.GOLD};
             transition: 0.5s;

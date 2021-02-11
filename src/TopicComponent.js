@@ -22,28 +22,6 @@ const StyledDiv = styled.div`
     `};
 
 
-    /* justify-content: ${props => {
-        switch (props.alignLight) {
-            case "left":
-                return "left";
-            case "right":
-                return "right";
-            default:
-                return "left";
-        }
-    }}; */
-
-    /* flex-direction: ${props => {
-
-
-        switch (props.alignLight) {
-            case "left":
-                return "row-reverse";
-        }
-    }}; */
-
-
-    
 
     h1{
         font-size: 5em;

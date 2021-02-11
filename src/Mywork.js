@@ -5,11 +5,7 @@ import Sharmen from './img/sharmen.JPG';
 import Digican from './img/digican.JPG';
 import { COLORS } from './Colors';
 
-const StyledDIV = styled.div`
-    min-height: 100vh;
-    display: flex;
-    margin-top: 20vh;
-`
+
 
 const ItemListDiv = styled.div`
     display: flex;
@@ -27,16 +23,11 @@ export default function Mywork() {
     return (
         <div id="myWork">
             <TopicComponent topic="My work" alignLight="left" />
-            {/* <StyledDIV > */}
-
             <ItemListDiv>
                 <a href="http://anjalee.se/"> <Circle imgName={Anjalee} /> </a>
                 <a href="http://sharmen.surge.sh/"> <Circle imgName={Sharmen} /> </a>
                 <a href="http://digican.se/"> <Circle imgName={Digican} /> </a>
-
-                {/* <Circle imgName={Man} /> */}
             </ItemListDiv>
-            {/* </StyledDIV> */}
         </div>
 
     );

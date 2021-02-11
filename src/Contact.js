@@ -1,6 +1,6 @@
 import TopicComponent from "./TopicComponent";
 
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Signature from './img/signature.png';
 import { FaEnvelope } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -10,15 +10,15 @@ import { COLORS } from './Colors';
 
 const StyledDIV = styled.div`
     
-    height: 75vh;
-    position: relative;
+    height: 70vh;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     img{
         height:70px;
-        position: absolute;
+        /* position: absolute;
         right: -200px;
-        bottom:-5px;
+        bottom:-5px; */
     }
     ul{
         list-style: none;
@@ -39,8 +39,26 @@ const StyledDIV = styled.div`
         font-size: 80px;
         transition: ease-in-out 0.2s;
     }
+    div{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+        height: 20px;
+        width: 100vw;
+        margin: 0;
+    }
+
+    footer{
+        height: 5vh;
+        background-color: blue;
+        display: flex;
+    }
+
     @media screen and (max-width: 730px){
-        /* flex-direction: column; */
+        li{
+        font-size: 50px;
+        }
     }
 `
 
@@ -58,7 +76,7 @@ export default function Contact() {
                     <li><a href="https://www.linkedin.com/in/pathum-weerathunga-87248a56"><FaLinkedin /></a></li>
                     <li><a href="http://digican.se/"><FaDesktop /></a></li>
                 </ul>
-                <img src={Signature} alt="" />
+
             </StyledDIV>
         </div>
 
