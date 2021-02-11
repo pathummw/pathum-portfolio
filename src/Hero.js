@@ -80,7 +80,7 @@ export default function Hero() {
             const result = await axios(url);
             setData(result)
         }
-    }, []);
+    }, [setData]);
 
     return (
         <HeroContainer id="home">
@@ -90,11 +90,13 @@ export default function Hero() {
             <h1>Pathum</h1>
             <h1>Weerathunga</h1>
             <h3>Front end developer </h3>     {/* I can your &lt;www /&gt;... */}
-            <span><p>From Stockholm</p>{!data.data ? '' : Math.round(data.data.main.temp)}
+            <span><p>From Stockholm</p>{/* !data.data ? '' : Math.round(data.data.main.temp) */}
 
-                {!data.data ? '' : < WiCelsius />}
+                {/* !data.data ? '' : < WiCelsius /> */}
 
             </span>     {/* &#8451; */}
+
+            <span>{!data.data ? 'Pathum' : data.data.main.temp}</span>
 
             <ImageDIV>
                 {<img src={ProfileImage} alt="Pathum profile picture" />}
