@@ -67,7 +67,7 @@ export default function Skills() {
             <TopicComponent topic="Skills" alignLight="right" />
             <StyledDIV>
                 <Left>
-                    <h2>Frontend languages</h2>
+                    <h2>Frontend development</h2>
 
                     <SkillItem topic="Javascript" level="level3" />
                     <SkillItem topic="React" level="level2" />
