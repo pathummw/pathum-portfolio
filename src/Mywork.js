@@ -2,7 +2,7 @@ import TopicComponent from "./TopicComponent";
 import styled from 'styled-components';
 import Anjalee from './img/anjalee.JPG';
 import Sharmen from './img/sharmen.JPG';
-import Digican from './img/digican.JPG';
+import Listig from './img/listig_login.JPG';
 import { COLORS } from './Colors';
 
 
@@ -29,9 +29,9 @@ export default function Mywork() {
         <div id="myWork">
             <TopicComponent topic="My work" alignLight="left" />
             <ItemListDiv>
-                <a href="http://anjalee.se/"> <Circle imgName={Anjalee} alt="Image link, website for a footvård " /> </a>
-                <a href="http://sharmen.surge.sh/"> <Circle imgName={Sharmen} alt="Image of a link,On going project for a school" /> </a>
-                <a href="http://digican.se/"> <Circle imgName={Digican} alt="Digican project link image,Pathums own company" /> </a>
+                <a href="https://anjalee.surge.sh/"> <Circle imgName={Anjalee} alt="Image link, website for a footvård " /> </a>
+                <a href="https://sharmen.se/"> <Circle imgName={Sharmen} alt="Image of a link,On going project for a school" /> </a>
+                <a href="https://listig.surge.sh/"> <Circle imgName={Listig} alt="Digican project link image,Pathums own company" /> </a>
             </ItemListDiv>
         </div>
 

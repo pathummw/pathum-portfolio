@@ -29,6 +29,7 @@ const StyledLink = styled(Link)`
         font-size: 1em;
         padding: 5px 30px;
         white-space: nowrap;
+        cursor: pointer;
         &:hover{
             color: ${COLORS.GOLD};
             transition: 0.5s;
