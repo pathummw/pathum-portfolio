@@ -71,6 +71,7 @@ export default function Skills() {
 
                     <SkillItem topic="Javascript" level="level3" />
                     <SkillItem topic="React" level="level2" />
+                    <SkillItem topic="React Native" level="level1" />
                     <SkillItem topic="HTML" level="level4" />
                     <SkillItem topic="CSS" level="level4" />
                     <SkillItem topic="SASS" level="level1" />
