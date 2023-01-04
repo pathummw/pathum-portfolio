@@ -69,7 +69,8 @@ export default function Skills() {
                 <Left>
                     <h2>Frontend development</h2>
 
-                    <SkillItem topic="Javascript" level="level3" />
+                    <SkillItem topic="Javascript" level="level4" />
+                    <SkillItem topic="Vue" level="level4" />
                     <SkillItem topic="React" level="level2" />
                     <SkillItem topic="React Native" level="level1" />
                     <SkillItem topic="HTML" level="level4" />
@@ -97,6 +98,7 @@ export default function Skills() {
                     <h2>Dev tools</h2>
                     <SkillItem topic="VS code" level="level4" />
                     <SkillItem topic="Github" level="level4" />
+                    <SkillItem topic="Azure DevOps" level="level4" />
                 </Right>
 
 
